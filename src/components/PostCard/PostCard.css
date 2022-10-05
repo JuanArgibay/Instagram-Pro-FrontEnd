@@ -1,0 +1,58 @@
+.postCard {
+  margin: 10px auto;
+  overflow: hidden;
+  background-color: black;
+  max-width: 700px;
+  min-height: 300px;
+  /* min-width: 200px; */
+  border-radius: 10px;
+  color: var(--color4);
+  box-shadow: 5px 5px 8px var(--color7);
+  border: 1px solid var(--color7);
+}
+
+.postCard__mainContent--list {
+  position: relative;
+}
+
+.postCard__description {
+  color: var(--color1);
+  font-size: 0.9rem;
+  inline-size: 71%;
+  height: 15%;
+  position: absolute;
+  overflow: auto;
+  overflow-wrap: break-word;
+  left: 15px;
+  bottom: 17px;
+}
+
+.postCard__description::-webkit-scrollbar {
+  width: 2px;
+}
+
+.postCard__description::-webkit-scrollbar-track {
+  background: var(--color7);
+}
+
+.postCard__description::-webkit-scrollbar-thumb {
+  background: var(--color6);
+}
+
+.postCard__commentTransition-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.postCard__commentTransition-enter-active {
+  opacity: 1;
+  transform: translateY(1);
+  transition: opacity 300ms, transform 300ms;
+}
+.postCard__commentTransition-exit {
+  opacity: 1;
+}
+.postCard__commentTransition-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}

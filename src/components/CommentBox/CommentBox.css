@@ -1,0 +1,56 @@
+.postCard__commentBox {
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  gap: 1rem;
+}
+
+.postCard__commentBox form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.postCard__commentBox form textarea {
+  background-color: transparent;
+  border: none;
+  color: var(--color1);
+}
+
+.postCard__commentBox form textarea::placeholder {
+  text-align: center;
+}
+
+.postCard__commentBox li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+  padding: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.postCard__commentBox button {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: var(--color7);
+  border-radius: 10px;
+}
+
+.postCard__commentBox--moreButtons {
+  align-self: center;
+  justify-content: center;
+}
+
+.postCard__commentBox--moreButtons button {
+  background-color: transparent;
+  font-style: italic;
+  border: none;
+  color: var(--color1);
+  padding: 0.5rem;
+}
+
+.postCard__commentBox--noComments {
+  justify-content: center;
+}

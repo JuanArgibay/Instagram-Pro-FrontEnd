@@ -1,0 +1,30 @@
+.postCard__header {
+  z-index: 1;
+  width: 100%;
+  position: relative;
+}
+
+.postCard__header--username {
+  position: absolute;
+  top: 10px;
+  left: 65px;
+  font-weight: bold;
+  color: var(--color1);
+}
+
+.postCard__header--profilePic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 1px rgba(255, 255, 255, 0.26) solid;
+}
+
+.postCard__header--creationDate {
+  font-size: 12px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

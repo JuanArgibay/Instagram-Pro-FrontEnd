@@ -1,0 +1,139 @@
+.head,
+.head-noaccount {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.head .head-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head a,
+.head-noaccount a {
+    text-decoration: none;
+}
+
+.head .head-user p {
+    color: var(--color6);
+    font-weight: 500;
+    text-align: center;
+}
+
+.head .head-user article a {
+    display: flex;
+    justify-content: center;
+}
+
+.head-noaacount .container-home-icon {
+    padding-right: 1.5rem;
+}
+
+.head .container-logout-icon a,
+.head .container-home-icon a,
+.head-noaccount .container-home-icon a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--color5);
+    padding: 0.5rem;
+}
+
+
+.head .logout-button,
+.head .add-post-button {
+    background-color: transparent;
+    border: none;
+}
+
+header .searcher {
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+header .header-nav {
+    margin: 0.8rem 1rem 0.5rem 1rem;
+}
+
+.select-disabled {
+    color: var(--color4);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    width: 100%;
+    height: 2px;
+}
+
+.underline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: inherit;
+    display: block;
+    width: inherit;
+    height: inherit;
+    background-color: currentColor;
+    transition: transform .2s ease-out;
+}
+
+.register-link .select-disabled .underline::before {
+    transform: translateX(101%);
+}
+
+.login-link .select-disabled .underline::before {
+    transform: translateX(-101%);
+}
+
+.select-active {
+    color: var(--color3);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.select-active .underline::before {
+    transform: translateX(0);
+}
+
+#login,
+#register {
+    transform: translateX(0);
+    transition: all .3s ease-out;
+}
+
+@media (min-width: 700px) {
+    .header-nav .head {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2.5rem 1fr 2.5rem 2.5rem 1fr;
+    }
+
+    .header-nav .head .head-user {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .header-nav .head .container-logout-icon {
+        grid-area: 1 / 5 / 2 / 6;
+    }
+
+    .header-nav .head .container-home-icon {
+        grid-area: 1 / 6 / 2 / 7;
+    }
+
+    .header-nav .head .container-add-post {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .header-nav .head-noaccount {
+        margin: 0 2rem 0 2rem;
+    }
+}

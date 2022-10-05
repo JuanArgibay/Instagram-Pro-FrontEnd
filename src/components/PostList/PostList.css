@@ -1,0 +1,24 @@
+.timeline__posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.timeline__seeMorePostsButton {
+  width: fit-content;
+  align-self: center;
+  margin-bottom: 0.5rem;
+  background-color: var(--color5);
+  border-radius: 25px;
+  cursor: pointer;
+  letter-spacing: 1.3px;
+  border: none;
+  color: var(--color2);
+  height: 40px;
+  width: 50%;
+}
+
+.timeline__seeMorePostsButton:hover {
+  background-color: var(--color3);
+}

@@ -1,0 +1,90 @@
+.newPostBox {
+  padding: 1rem;
+  background-color: gray;
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 auto;
+  border-radius: 10px;
+  max-width: 700px;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  gap: 0.5rem;
+  background-color: var(--color2);
+  border-radius: 15px;
+  box-shadow: 5px 5px 8px var(--color7);
+}
+
+.newPostBox__photos button {
+  /*   cursor: pointer;
+  background-color: var(--color5);
+  border-radius: 10px; */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.newPostBox__sendButton {
+  background-color: var(--color7);
+  border-radius: 10px;
+  cursor: pointer;
+  height: 100%;
+}
+
+.newPostBox__photos button {
+  padding: 4px;
+}
+
+.newPostBox__photos {
+  grid-column: 1 / 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 6rem;
+  font-size: 0.8rem;
+  gap: 0.3rem;
+}
+
+.newPostBox__photos span {
+  align-self: end;
+}
+
+.newPostBox__description {
+  grid-column: 1/2;
+  grid-row: 2;
+}
+.newPostBox__description textarea {
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.2rem;
+  color: var(--color5);
+  box-shadow: inset 8px 8px 8px var(--color7), inset -8px -8px 8px var(--color1);
+}
+
+.newPostBox__description.error textarea::placeholder {
+  color: red;
+}
+
+.newPostBox__sendButton {
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+  padding: 1rem;
+}
+
+.newPostBox__picPreview {
+  border-radius: 10px;
+  transform: scale(0.8);
+  border: 1px var(--color5) solid;
+}
+
+@media (max-width: 620px) {
+  .newPostBox__photos {
+    margin: 0;
+  }
+}

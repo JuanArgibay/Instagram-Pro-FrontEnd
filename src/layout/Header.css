@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 0 1rem;
+    position: sticky;
+    top: 0rem;
+    background-color: var(--color1);
+    z-index: 2;
+}
+
+header .titleApp {
+    font-family: 'Grand Hotel', cursive;
+    font-weight: lighter;
+    font-size: 50px;
+    color: var(--color6)
+}
+
+header .subTitleApp {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    position: absolute;
+    z-index: 1;
+    top: 2.7rem;
+    left: 10.9rem;
+    color: var(--color5);
+}

@@ -1,0 +1,28 @@
+.postCard__likeAndCommentMenu {
+  position: absolute;
+  right: 15px;
+  bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.postCard__commentButton {
+  background: transparent;
+  border: none;
+}
+
+.postCard__likeAndCommentMenu li {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.postCard__likeAndCommentMenu button {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.postCard__likeAndCommentMenu button:hover {
+  transform: scale(1.5);
+}

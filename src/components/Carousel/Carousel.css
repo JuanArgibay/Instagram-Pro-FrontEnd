@@ -1,0 +1,89 @@
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.carousel-item .active {
+  object-fit: cover;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0) 20%),
+    linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0) 20%);
+}
+
+.carousel__menu {
+  cursor: default;
+}
+
+.carousel__menu button {
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.carousel__menu--positionDots {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+}
+
+.carousel__menu--positionDots.four {
+  margin-left: -40px;
+}
+
+.carousel__menu--positionDots.three {
+  margin-left: -30px;
+}
+
+.carousel__menu--positionDots.two {
+  margin-left: -20px;
+}
+
+.carousel__menu--right {
+  position: absolute;
+  bottom: 50%;
+  right: 5px;
+  background: transparent;
+  border: none;
+}
+
+.carousel__menu--left {
+  position: absolute;
+  bottom: 50%;
+  left: 5px;
+  background: transparent;
+  border: none;
+}
+
+.carousel__menu--positionDots--buttons {
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color7);
+}
+
+.carousel__menu--positionDots--buttons.active {
+  background-color: var(--color3);
+}
