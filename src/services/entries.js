@@ -83,7 +83,7 @@ export const listEntries = async ({ keyword, page, limit, token }) => {
         },
       }
     );
-
+      console.log(data);
     return data;
   } catch (err) {
     console.error(err);

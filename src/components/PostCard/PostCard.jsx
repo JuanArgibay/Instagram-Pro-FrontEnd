@@ -11,6 +11,8 @@ export const PostCard = ({ post, singlePost, token }) => {
   const [isSinglePost, setSinglePost] = useState(false);
   const [newCommentToggle, setNewCommentToggle] = useState(false);
   const nodeRef = useRef(null);
+  const [totalLikes, setTotalLikes] = useState(post.totalLikes);
+  const [totalComments, setTotalComments] = useState(post.totalComments);
 
   /* Componente que dependiendo de si es una vista individual o multiple cambia su comportamiento */
   useEffect(() => {
@@ -66,8 +68,10 @@ export const PostCard = ({ post, singlePost, token }) => {
             )}
 
             <LikeAndCommentMenu
-              totalLikes={post.totalLikes}
-              totalComments={post.totalComments}
+              setTotalLikes={setTotalLikes}
+              totalLikes={totalLikes}
+              totalComments={totalComments}
+              setTotalComments={setTotalComments}
               idEntry={post.entryId}
               likedByMe={post.likedByMe}
               token={token}
@@ -87,7 +91,8 @@ export const PostCard = ({ post, singlePost, token }) => {
               <CommentBox
                 comments={post.comments}
                 idEntry={post.entryId}
-                totalComments={post.totalComments}
+                totalComments={totalComments}
+                setTotalComments={setTotalComments}
                 singlePost={isSinglePost}
                 token={token}
               />

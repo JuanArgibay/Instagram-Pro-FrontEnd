@@ -29,7 +29,6 @@
   background-color: var(--color7);
   border-radius: 10px;
   cursor: pointer;
-  height: 100%;
 }
 
 .newPostBox__photos button {
@@ -55,6 +54,7 @@
   grid-column: 1/2;
   grid-row: 2;
 }
+
 .newPostBox__description textarea {
   width: 100%;
   border-radius: 10px;
