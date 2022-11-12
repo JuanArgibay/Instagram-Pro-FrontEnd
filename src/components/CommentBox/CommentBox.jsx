@@ -10,6 +10,7 @@ export const CommentBox = ({
   totalComments,
   singlePost,
   token,
+  setTotalComments
 }) => {
   const [postComments, setPostComments] = useState([]);
   const [commentIndex, setCommentIndex] = useState(null);
@@ -44,12 +45,16 @@ export const CommentBox = ({
     e.preventDefault();
 
     const newComment = { comment: e.target.elements.newComment.value };
+    console.log(newComment);
 
     await services.entries.sendCommentToEntry({
       comment: newComment,
       idEntry,
       token,
     });
+
+    const {data} = await services.entries.getSingleEntry({idEntry, token});
+    setTotalComments(data.fullEntry.totalComments);
 
     refreshComments({ limit });
     e.target.reset();

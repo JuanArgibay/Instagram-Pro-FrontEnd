@@ -6,6 +6,7 @@ import "./LikeAndCommentMenu.css";
 
 export const LikeAndCommentMenu = ({
   totalLikes,
+  setTotalLikes,
   totalComments,
   idEntry,
   likedByMe,
@@ -14,18 +15,20 @@ export const LikeAndCommentMenu = ({
   setNewCommentToggle,
 }) => {
   const [liked, setLiked] = useState(undefined);
-
   const handleLikeButton = async () => {
     try {
       if (!token) throw new Error("Must be logged");
       const { data } = await services.entries.likeAnEntry({ idEntry, token });
+      const data2 = await services.entries.getSingleEntry({idEntry, token});
+      setTotalLikes(data2.data.fullEntry.totalLikes);
+     /*  setTotalLikes(data2.fullEntry.totalLikes) */
       data.message === "Disliked" ? setLiked(false) : setLiked(true);
     } catch (err) {
       console.error(err);
     }
   };
 
-  const handleCommentDisplayButton = () => {
+  const handleCommentDisplayButton = async () => {
     setNewCommentToggle(!newCommentToggle);
   };
 
