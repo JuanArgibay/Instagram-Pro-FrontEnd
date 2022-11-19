@@ -24,7 +24,7 @@ export const SearchBar = () => {
         placeholder="Search the views! "
       ></input>
       <Link to={`/search/${keyword}`}>
-        <button className="searcher-button">
+        <button className="searcher-button" title="Search">
           <img
             className="searcher-icon"
             src={searchicon}

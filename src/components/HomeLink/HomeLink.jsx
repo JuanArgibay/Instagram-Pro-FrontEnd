@@ -6,7 +6,9 @@ export const HomeLink = () => {
         <img
             src={postIcon}
             alt='icon-home'
-            className='home-icon'>
+            className='home-icon'
+            title="Home"
+            >
         </img>
     )
 }

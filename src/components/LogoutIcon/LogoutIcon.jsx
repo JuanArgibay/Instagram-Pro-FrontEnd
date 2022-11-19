@@ -6,7 +6,9 @@ export const LogoutIcon = () => {
         <img
             src={logouticon}
             alt='icon-post'
-            className='logout-icon'>
+            className='logout-icon'
+            title='Logout'
+            >
         </img>
     )
 }

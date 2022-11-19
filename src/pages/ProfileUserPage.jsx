@@ -27,6 +27,7 @@ export const ProfileUserPage = () => {
     useEffect(() => {
         setTotalPhotos([...totalPhotos, ...userPhotos]);
         setLoading(false);
+       /*  console.log(totalPhotos); */
     }, [userPhotos]);
 
     // función que actualiza la paginación
@@ -36,6 +37,8 @@ export const ProfileUserPage = () => {
 
     if (totalPhotos.length === 0 && loading) return <Loading></Loading>
     if (error) return <p>{error.message}</p>
+
+    
 
     return (
         <>
@@ -55,7 +58,7 @@ export const ProfileUserPage = () => {
                                 index={index}
                                 handleClick={handleClick}
                             />
-                        ) : null
+                        ) : <p className='notFound'>Photos not found</p>
                         }
                     </section>)
             }

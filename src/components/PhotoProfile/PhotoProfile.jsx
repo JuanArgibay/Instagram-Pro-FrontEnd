@@ -11,7 +11,9 @@ export const PhotoProfile = ({ user }) => {
                         <img
                             src={`${process.env.REACT_APP_SERVER}/${user.avatar}`}
                             alt={`avatar of ${user.username}`}
-                            className='avatar'>
+                            className='avatar'
+                            title="My profile"
+                            >
                         </img>
                     </Link>
                 ) : (
@@ -19,7 +21,9 @@ export const PhotoProfile = ({ user }) => {
                         <img
                             src={DefaultProfilePic}
                             alt={`avatar of ${user.username}`}
-                            className='avatar'>
+                            className='avatar'
+                            title="My profile"
+                            >
                         </img>
                     </Link>
                 )}

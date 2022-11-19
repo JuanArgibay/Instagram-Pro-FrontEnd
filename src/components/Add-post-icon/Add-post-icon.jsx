@@ -5,6 +5,8 @@ export const AddPostIcon = () => {
     return <img
         src={PostIcon}
         alt="addIcon"
-        className='post-icon'>
+        className='post-icon'
+        title='Add post'
+        >
     </img>;
 };

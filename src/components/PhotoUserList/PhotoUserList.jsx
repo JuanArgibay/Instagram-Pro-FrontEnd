@@ -30,7 +30,7 @@ export const PhotoUserList = ({
                             loading ? <p>Loading...</p> : <ButtonForm message={'See more results'} handleClick={handleClick}></ButtonForm>
                         )}
                     </>
-                ) : null
+                ) : <p>Photos not found</p>
             }
         </article>
     )

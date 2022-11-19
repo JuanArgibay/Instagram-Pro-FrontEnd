@@ -242,6 +242,12 @@ main .photo-container img {
   font-size: 0.9rem;
 }
 
+.notFound {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
 @media (min-width: 700px) {
   .App {
     width: 60%;
@@ -268,4 +274,3 @@ main .photo-container img {
     flex-direction: column;
   }
 }
-

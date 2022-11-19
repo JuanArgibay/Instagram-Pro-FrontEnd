@@ -19,12 +19,13 @@ export const useOwnUser = () => {
                 if (keys.page <= index.lastPage) {
                     const ownUser = await services.users.ownUserProfileServices({keys,token});
                     setUser(ownUser.data.fullUser.user);
-                    setUserPhotos(ownUser.data.fullUser.photos);
-                    setIndex(ownUser.data.fullUser.index)
+                    ownUser.data.fullUser.photos !== 'Photos not found' ? setUserPhotos(ownUser.data.fullUser.photos) : setUserPhotos([]);
+                    setIndex(ownUser.data.fullUser.index);
                 }      
             } catch (error) {
                 setError(error)
             } finally {
+                console.log(userPhotos);
                 setLoading(false)
             }
         };
