@@ -53,7 +53,7 @@ export const AuthLinks = ({
           <ul className="head-noaccount">
             <li className="container-register-link">
               <Link to="/register" className="register-link">
-                <p id="register" onClick={handleClicker} className={link1}>
+                <p id="register" onClick={handleClicker} className={link1} title="Singup">
                   Singup
                   <span className="underline"></span>
                 </p>
@@ -66,7 +66,7 @@ export const AuthLinks = ({
             </li>
             <li className="container-login-link">
               <Link to="/login" className="login-link">
-                <p id="login" onClick={handleClicker} className={link2}>
+                <p id="login" onClick={handleClicker} className={link2} title="Login">
                   Login
                   <span className="underline"></span>
                 </p>

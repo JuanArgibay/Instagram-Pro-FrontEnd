@@ -36,7 +36,7 @@ export const ProfilePage = () => {
             <article className='profile-data'>
                 <h1>{user.username}</h1>
                 <p className='user-date-created'>Since: {new Date(user.createdAt).toLocaleString()}</p>
-                <Link to='/edit' className='edit-link'>
+                <Link to='/edit' title='Edit' className='edit-link'>
                     <p className='edit-link-text'>
                         Edit user
                     </p>
@@ -50,7 +50,7 @@ export const ProfilePage = () => {
                     loading={loading}
                     index={index}
                 />
-            ) : null
+            ) : <p className='notFound'>Photos not found</p>
             }
         </section>
     )
