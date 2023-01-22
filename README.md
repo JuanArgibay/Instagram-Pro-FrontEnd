@@ -69,5 +69,5 @@ Estas se encuentran alojadas en el fichero 'Main.jsx' dentro de la carpeta 'layo
 
 ## Iniciar la aplicación
 
-1. Lanzar la parte del backend del proyecto. => <https://github.com/AdrianMayor/instagramPro-BackEnd>
+1. Lanzar la parte del backend del proyecto. => <https://github.com/JuanArgibay/Instagram-Pro-backend>
 2. Establecer la ruta del backend creando el fichero '.env' siguiendo de ejemplo el fichero '.env.example'
